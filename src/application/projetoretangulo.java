@@ -11,7 +11,8 @@ public class projetoretangulo {
 		Scanner sc = new Scanner(System.in);
 
 		
-		double largura, altura;
+		double largura, altura, area, perimetro;
+		int opcao;
 		
 		// Leitura da largura com validacao
 		
@@ -32,6 +33,53 @@ public class projetoretangulo {
 			}
 		
 		System.out.println();
+		
+		// Programa finalizado
+		
+		area = largura * altura;
+		perimetro = (largura + altura) * 2;
+		
+		System.out.println("MENU:");
+		System.out.println("1 - Mostrar area");
+		System.out.println("2 - Mostrar perimetro");
+		System.out.println("3 - Sair");
+		System.out.print("Digite uma opção: ");
+		opcao = sc.nextInt();
+		
+		while (opcao == 1 || opcao == 2) {
+			if (opcao == 1) {
+				System.out.println();
+				System.out.println("AREA = " + area);
+			}
+			else {
+				System.out.println();
+				System.out.println("PERIMETRO = " + perimetro);
+			}
+			System.out.println();
+			System.out.println("MENU:");
+			System.out.println("1 - Mostrar area");
+			System.out.println("2 - Mostrar perimetro");
+			System.out.println("3 - Sair");
+			System.out.print("Digite uma opção: ");
+			opcao = sc.nextInt();
+			
+			while (opcao > 3) {
+				System.out.println();
+				System.out.println("OPÇÃO INVALIDA");
+				System.out.println();
+				System.out.println("MENU:");
+				System.out.println("1 - Mostrar area");
+				System.out.println("2 - Mostrar perimetro");
+				System.out.println("3 - Sair");
+				System.out.print("Digite uma opção: ");
+				opcao = sc.nextInt();
+			}
+			
+			if (opcao == 3) {
+				System.out.println();
+				System.out.println("FIM DO PROGRAMA!");
+			}
+		}
 		
 		
 		sc.close();
